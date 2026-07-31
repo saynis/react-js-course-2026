@@ -226,18 +226,6 @@ This is the component you will start editing in the very next lesson.
 * Read terminal error messages carefully — they usually tell you exactly what went wrong (a missing folder, a typo in a command, etc.).
 * Add a `.gitignore` file (Vite creates one for you) so that `node_modules` is never uploaded to a code repository like GitHub.
 
-## Classroom Practice
-
-1. As a class, run `node -v` and `npm -v` together and confirm everyone has Node.js installed correctly.
-2. Together, create a shared example project called `classroom-demo` using the steps in this lesson, choosing React and JavaScript.
-3. Open `src/App.jsx` in the new project and identify which lines match the "Simple Example" from Lesson 1.
-
-## Student Exercises
-
-1. Create a new Vite React project on your own computer named `my-practice-app`, and get the development server running successfully.
-2. Open `index.html` in your new project and find the `<div id="root"></div>` element. Write one sentence explaining its purpose.
-3. Open `package.json` and list at least three pieces of information you can find inside it (for example, the project name or a script name).
-
 ## Mini Assignment
 
 Create a new Vite React project named `about-me-app`. Open `src/App.jsx` and change the text inside the `<h1>` tag to show your own name instead of the default text. Confirm that the change appears in the browser after saving the file. Take a screenshot (or write down) the local URL shown in your terminal after running `npm run dev`.
@@ -251,10 +239,3 @@ Create a new Vite React project named `about-me-app`. Open `src/App.jsx` and cha
 * `node_modules` is generated automatically and should never be edited manually.
 * Press `Ctrl + C` in the terminal to stop the development server.
 
-## Teacher Notes
-
-* **Important point to emphasize:** installing Node.js is a one-time setup step; creating a *project* with Vite is something students will repeat often.
-* **Ask the class:** "What do you think would happen if we deleted the `node_modules` folder?" (Answer: nothing is lost — running `npm install` again rebuilds it.)
-* **Common student confusion:** students sometimes think they need to reinstall Node.js or Vite for every new project. Clarify that only `npm create vite@latest` needs to be run again for each new project.
-* **Demonstration idea:** intentionally run `npm run dev` from the wrong folder in front of the class to show the resulting error message, then fix it with `cd`.
-* **Suggested lesson duration:** 45–60 minutes, including hands-on setup time for every student.

@@ -304,17 +304,7 @@ function AuthSection() {
 * Avoid nesting more than one ternary operator — extract the logic into a helper function or use `if` statements instead once you have more than two outcomes.
 * Always plan for loading and empty states in any component that displays data that might not be ready yet, since this makes the app feel much more polished and predictable.
 
-## Classroom Practice
 
-1. As a class, build a `Greeting` component that shows "Good morning" or "Good evening" using a ternary based on a boolean prop.
-2. Add a `&&` condition to a component that only shows a "New!" label when a prop called `isNew` is `true`.
-3. Take a `StatusMessage` component with three possible states (`"loading"`, `"error"`, `"success"`) and rewrite it from nested ternaries into clean `if` statements.
-
-## Student Exercises
-
-1. Build a `WeatherMessage` component that shows different text depending on a `temperature` prop (for example, "It's hot!" if above 30, "It's cold!" if below 10, and "Nice weather!" otherwise), using `if` statements.
-2. Build a `CartIcon` component that only shows a count badge when the number of items in the cart is greater than zero.
-3. Build a `TaskItem` component that applies a different CSS class depending on whether a task is marked complete.
 
 ## Mini Assignment
 
@@ -329,10 +319,3 @@ Build a `Dashboard` component with a boolean `isLoading` prop and an array `stud
 * Conditional rendering can also be used to apply different CSS classes based on state or props.
 * Avoid deeply nested ternary operators — use `if` statements or a helper function once there are more than two possible outcomes.
 
-## Teacher Notes
-
-* Reuse the `StudentList` empty-array example from Lesson 6 here, and explicitly connect it to today's broader topic of conditional rendering.
-* Common confusion: students often try to write `if` directly inside `{}` in JSX and are confused by the resulting syntax error. Remind them of the expressions-vs-statements rule from Lesson 3.
-* Demonstration idea: show the "0 renders on the page" bug live, using a cart count starting at 0 with a plain `count && <Badge />`, so students recognize and remember this exact pitfall.
-* Ask: "At what point does a ternary become hard to read, and what would you do instead?" to build judgment about when to refactor to `if` statements.
-* Suggested duration: 90 minutes.

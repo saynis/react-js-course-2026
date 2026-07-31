@@ -292,17 +292,6 @@ function App() {
 * Always consider and handle the empty-array case for any list your users might filter, search, or start empty.
 * Use parentheses instead of curly braces for single-expression arrow functions inside `map()` to avoid forgetting a `return` statement: `(item) => (<li>{item}</li>)`.
 
-## Classroom Practice
-
-1. As a class, take an array of five product names and render them as a `<ul>` list using `map()`.
-2. Convert an array of student objects (with `id` and `name`) into a list of `StudentCard` components, using `student.id` as the key.
-3. Deliberately remove the `key` prop from a list and observe the warning in the browser console, then add it back.
-
-## Student Exercises
-
-1. Create an array of at least four objects representing your favorite movies (with `id`, `title`, and `year`), and render them using `map()` inside a `MovieCard` component.
-2. Build a `TodoList` component that receives an array of todo strings as a prop and renders them as a list.
-3. Modify any list component you have built to show a friendly message like "No items found" when the array is empty.
 
 ## Mini Assignment
 
@@ -317,10 +306,3 @@ Create an array of at least five objects representing products, each with `id`, 
 * Arrays can be passed into components as props, letting a list component handle its own `map()` logic.
 * Empty arrays should be handled explicitly, showing a helpful message instead of leaving a blank area.
 
-## Teacher Notes
-
-* Connect this lesson directly back to Lesson 5: show how `map()` removes the need to manually write out `<StudentCard />` three separate times with different props.
-* Common confusion: students often do not understand why keys matter until they see a bug caused by using the index as a key on a reorderable list. If time allows, demonstrate this with a simple "remove item" button (even a non-functional one described verbally) to show the risk conceptually.
-* Ask: "What do you think would happen if two list items had the exact same key?" to check understanding of uniqueness.
-* Demonstration idea: show the browser console warning that appears when a `key` prop is missing, so students recognize it instantly in their own projects later.
-* Suggested duration: 90 minutes, since `map()` combined with keys is a common source of early bugs and benefits from extra practice time.

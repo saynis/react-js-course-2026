@@ -289,17 +289,6 @@ function SearchBox() {
 * Format JSX with consistent indentation so the nesting of elements is easy to follow at a glance.
 * Add JSX comments to explain non-obvious sections of markup, just like you would comment tricky JavaScript logic.
 
-## Classroom Practice
-
-1. As a class, take a broken JSX snippet with two sibling root elements and fix it together using a Fragment.
-2. Convert a plain HTML snippet (given by the instructor) into valid JSX, fixing `class`, unclosed tags, and attribute names.
-3. Live-code a component that displays a student's name and age using `{}` expressions pulled from variables.
-
-## Student Exercises
-
-1. Write a component called `Announcement` that displays a heading and a paragraph inside a Fragment (no extra `<div>`).
-2. Write a component called `PriceTag` that stores a `price` variable and displays it inside a `<p>` tag using a JSX expression, formatted like `Price: $25`.
-3. Write a component called `HighlightedText` that displays a sentence with inline styles making the text bold and colored orange.
 
 ## Mini Assignment
 
@@ -322,11 +311,3 @@ Make sure the entire component follows every JSX rule covered in this lesson.
 * JavaScript expressions can be inserted into JSX using single curly braces `{}`.
 * Inline styles are written as JavaScript objects with camelCase property names, using double curly braces `style={{ }}`.
 * JSX comments must be written as `{/* comment */}`.
-
-## Teacher Notes
-
-* **Emphasize:** JSX is not a template language and not HTML — it compiles to JavaScript, which is why its rules follow JavaScript syntax.
-* **Ask the class:** "Why do you think `class` had to be renamed to `className` in JSX?" (Answer: `class` is a reserved JavaScript keyword.)
-* **Common confusion:** Students often try to write `if` statements or `for` loops directly inside `{}`. Reassure them this is intentional — Lesson 6 and Lesson 9 show the correct patterns.
-* **Demonstration idea:** Deliberately write invalid JSX (missing closing tag, two root elements) and show the actual error message Vite displays, so students learn to recognize these errors on their own.
-* **Suggested lesson duration:** 60 minutes, with significant hands-on practice time.

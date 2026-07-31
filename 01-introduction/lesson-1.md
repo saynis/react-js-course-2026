@@ -248,11 +248,3 @@ Choose any website you use often (for example, a social media site, a shopping s
 * React apps are usually built as **single-page applications (SPA)**, and **React DOM** is responsible for rendering components into the real browser DOM.
 * Everything you already know from JavaScript — variables, functions, conditions, loops, events, arrays, and objects — is still used inside React.
 * This course will build up your skills lesson by lesson, ending with a complete **Student Course Management Dashboard** final project.
-
-## Teacher Notes
-
-* **Emphasize:** React is JavaScript, not a new language. Students who feel intimidated often relax once they understand this.
-* **Ask the class:** "What is frustrating about building big websites with only HTML, CSS, and JavaScript?" Let students answer before explaining why React helps with exactly those frustrations.
-* **Common confusion:** Students often think JSX is literally HTML. Reassure them that Lesson 3 will explain JSX in full detail — for now, focus on the big picture.
-* **Demonstration idea:** Live-code the Vanilla JS vs React comparison from "More Examples" side by side in two browser tabs, and show that both produce the same visual result.
-* **Suggested duration:** 45–60 minutes. This lesson is conceptual, so keep the pace comfortable and encourage questions.

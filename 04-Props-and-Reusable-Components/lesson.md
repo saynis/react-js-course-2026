@@ -243,17 +243,7 @@ This behaves identically to the first example — only the way the component rea
 * Once comfortable, prefer destructured props for readability in components that use several props.
 * Pass only the props a component actually needs — avoid passing large, unrelated objects when a few specific values are sufficient.
 
-## Classroom Practice
 
-1. As a class, create a `ProductCard` component that accepts `name` and `price` props, then render it three times with different products.
-2. Take a `StudentCard` component written with `props.name` and `props.course`, and rewrite it together using destructuring.
-3. Intentionally pass the wrong prop name (for example, pass `title` but read `props.name`) and observe what happens on the page, then fix it.
-
-## Student Exercises
-
-1. Create a `ServiceCard` component that accepts `title` and `description` props, and use it to display three different services.
-2. Create a `UserProfile` component that accepts `username`, `email`, and `age` props (mixing strings and a number), and render it with your own information.
-3. Take any component you built in Lesson 4 that had no props, and add at least two props to make it reusable with different data.
 
 ## Mini Assignment
 
@@ -269,10 +259,3 @@ Build a `ProductCard` component that accepts `name`, `price`, and `inStock` (a b
 * The same component can be reused many times with different props, producing different output each time.
 * Destructuring (`{ name, course }`) is a shorter way to read props once you understand how `props.name` works underneath.
 
-## Teacher Notes
-
-* Build directly on Lesson 4 by literally reusing the `StudentCard` example and asking students to notice the identical output problem before introducing props as the solution.
-* Common confusion: students often forget curly braces when passing numbers or variables as props. Show the difference between `age="20"` and `age={20}` explicitly, including a quick check with `typeof`.
-* Emphasize the read-only nature of props strongly here — this concept becomes essential when state and lifting state up are introduced later.
-* Ask: "If a child component wanted to change its name, what do you think it would need to ask its parent to do?" to plant the seed for later lessons without answering it yet.
-* Suggested duration: 75–90 minutes.

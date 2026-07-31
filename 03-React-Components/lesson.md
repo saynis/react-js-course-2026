@@ -303,17 +303,6 @@ Here, `App` is the parent of `StudentList`, and `StudentList` is the parent of e
 * Keep components focused on one clear purpose — a `Header` should handle the header, not also manage a shopping cart.
 * Use default exports for the main component in each file, to keep imports simple and consistent.
 
-## Classroom Practice
-
-1. As a class, create a `Footer` component in its own file, export it, and render it inside `App`.
-2. Take an existing `App.jsx` with a header, paragraph, and button all written directly inside it, and split the header into its own `Header` component file.
-3. Render the same `Footer` component twice inside `App` and discuss what students notice about the output.
-
-## Student Exercises
-
-1. Create a `Navbar` component in its own file inside a `components` folder, export it, and import it into `App`.
-2. Create a `Card` component that displays a title and description, then render it three times inside `App`.
-3. Build a small component tree with at least three custom components (for example, `Header`, `MainContent`, `Footer`) all rendered together inside `App`.
 
 ## Mini Assignment
 
@@ -327,11 +316,3 @@ Create a new Vite React project (or reuse one from Lesson 2). Build three separa
 * When one component renders another, the outer one is the parent and the inner one is the child.
 * The same component can be rendered multiple times, making it reusable.
 * Larger projects organize component files inside a `components` folder for clarity.
-
-## Teacher Notes
-
-* Reinforce the capital-letter rule with a live demo: rename a component to lowercase and show the resulting error or broken rendering.
-* Common confusion: students sometimes think each component needs its own `main.jsx`-style entry point. Clarify that only `main.jsx` renders into the actual DOM; all other components are rendered indirectly through `App`.
-* Ask: "If `StudentCard` is rendered three times right now, why do all three look identical?" to set up curiosity for props in the next lesson.
-* Demonstration idea: build the component tree from Lesson 1's sketch as actual files and code, live, to connect the earlier planning exercise to real code.
-* Suggested duration: 75–90 minutes.

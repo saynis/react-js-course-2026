@@ -267,17 +267,7 @@ function ServiceCard() {
 * Use arrow functions only when you need to pass extra arguments to a handler; otherwise, pass the named function directly for clarity and slightly better performance.
 * Keep event handler functions focused on one clear action, and move complex logic into separate helper functions if needed.
 
-## Classroom Practice
 
-1. As a class, create a button that logs a message to the console when clicked, using a named handler function.
-2. Add an `onChange` handler to a text input that logs the current value as the user types.
-3. Build a form with `onSubmit`, using `preventDefault()` to stop the page from reloading, and log a submission message instead.
-
-## Student Exercises
-
-1. Create a button that changes what it logs based on an argument you pass to its handler function (for example, logging different messages for "Like" and "Dislike" buttons using the same handler).
-2. Add an `onMouseEnter` handler to a card component that logs the name of the card being hovered.
-3. Build a small form with two inputs and a submit button, and log both input values together when the form is submitted (hint: you can read each input's value from separate `onChange` handlers, or directly from the form on submit).
 
 ## Mini Assignment
 
@@ -291,11 +281,3 @@ Build a `ProductCard` component that displays a product name and has two buttons
 * Every event handler receives an event object, commonly used to read `event.target.value` from inputs.
 * `event.preventDefault()` stops default browser behavior, most commonly used to stop form submissions from reloading the page.
 * To pass extra arguments to a handler, wrap the call in an arrow function: `() => handleDelete(id)`.
-
-## Teacher Notes
-
-* Spend real time on the "calling vs. passing" distinction — this is one of the most persistent beginner bugs in React. Show both versions live and have students predict what will happen before running the code.
-* Common confusion: students sometimes think `preventDefault()` prevents the form's `onSubmit` handler from running. Clarify that it only stops the browser's default behavior (like reloading), not your own code.
-* Ask: "Why do you think React uses `onClick` instead of the `addEventListener` you already know?" to connect back to prior JavaScript knowledge and highlight that JSX event attributes are just a different syntax for a similar idea.
-* Demonstration idea: log `event` itself to the console and let students explore its properties in the browser dev tools.
-* Suggested duration: 90 minutes, since this lesson sets up all the interactivity used in the rest of the course.

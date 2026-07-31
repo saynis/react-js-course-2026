@@ -342,17 +342,6 @@ function TodoList() {
 * Name state variables and their setters clearly and consistently, following the `value` / `setValue` pattern.
 * Keep each piece of state focused on one clear purpose, rather than cramming unrelated values into a single state variable.
 
-## Classroom Practice
-
-1. As a class, build a counter component with "Increase" and "Decrease" buttons using `useState`.
-2. Build a toggle component that switches a piece of text between "Logged In" and "Logged Out" when a button is clicked.
-3. Take an array of three todo strings in state, and add a button that adds a new todo to the list without modifying the original array directly.
-
-## Student Exercises
-
-1. Build a `LikeButton` component that starts at 0 likes and increases by one each time it is clicked, using the previous-state callback form.
-2. Build a `ColorSwitcher` component with boolean state that toggles a box between two background colors when clicked.
-3. Build a small list of favorite foods in state, with a button that removes the last item from the list each time it is clicked, without modifying the array directly.
 
 ## Mini Assignment
 
@@ -367,10 +356,3 @@ Build a `ShoppingCart` component that keeps an array of item names in state, sta
 * State must never be modified directly — always create a new array or object when updating array or object state.
 * The previous-state callback form, `setValue((prev) => ...)`, safely builds on the latest state value.
 
-## Teacher Notes
-
-* Start by live-coding the broken "plain variable" counter first, and let students predict what will happen before running it — seeing it fail to update makes the need for `useState` concrete.
-* Common confusion: students often expect `console.log(count)` right after calling `setCount(...)` to show the new value. Explain clearly that state updates apply on the next render, not instantly.
-* Spend extra time on the array and object immutability rules, since this is one of the most common sources of subtle bugs later in the course, especially once forms and lists are combined.
-* Ask: "Why do you think React cares whether we create a new array instead of just modifying the old one?" to build intuition about how React detects changes.
-* Suggested duration: 120 minutes — this is one of the most important lessons in the entire course and benefits from extra time and practice.
