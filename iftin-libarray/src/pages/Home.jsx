@@ -1,3 +1,5 @@
+import Icons from "../components/home/Icons"
+import Ready from "../components/home/Ready"
 
 
 function Home() {
@@ -21,7 +23,7 @@ function Home() {
           quality resources to support their academic work.
           </p>
 
-           <button className="py-2 px-8 bg-[#2A7EFF] rounded-md">Learn more</button>
+           <button className="py-2 px-8 bg-[#2A7EFF] rounded-md text-white">Learn more</button>
       </div>
 
 
@@ -56,6 +58,12 @@ function Home() {
      </div>
 
     </section>
+
+    {/* icons */}
+    <Icons />
+
+    {/* call to action */}
+    <Ready />
 
       </div>
   )
