@@ -6,6 +6,7 @@ import Contact from "./pages/Contact"
 import About from "./pages/About"
 import Books from "./pages/Books"
 import BookDetail from "./components/books/BookDetail"
+import Addbook from "./components/books/Addbook"
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/books" element={<Books/>} />
         <Route path="/books/:id" element={<BookDetail />} />
+        <Route path="/books/new" element={<Addbook />} />
       </Routes>
   
       <Footer />
