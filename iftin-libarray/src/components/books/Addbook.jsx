@@ -1,9 +1,12 @@
 import axios from "axios"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
+ import { ToastContainer, toast } from 'react-toastify';
 
 
 function Addbook() {
 
+    const navigate = useNavigate()
     const [formData, setFormData] = useState({
         title: "",
         author: "",
@@ -25,18 +28,33 @@ function Addbook() {
         try {
             const response = await axios.post("https://jju.saynis.store/api/books", formData)
 
-            console.log(response)
-            console.log(formData)
+            if(response.status != 201){
+                toast.error("feiled to create")
+            }
 
-            alert("book creared seccesfully")
+            toast.success("book created seccessfuly")
+            setFormData({
+                title: "",
+                author: "",
+                description: "",
+                image: "",
+                category: "",
+                isbn: "",
+                language: ""
+            })
+
+           setTimeout(()=>{
+                 navigate("/books")
+           },2000)
         } catch (error) {
-          alert(error)
+           toast.error(error.message)
         }
 
     }
 
     return (
         <div className="py-24">
+            <ToastContainer />
 
 
             <div className="max-w-4xl mx-auto mt-4">
