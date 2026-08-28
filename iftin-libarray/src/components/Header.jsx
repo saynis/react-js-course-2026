@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import { FaCartArrowDown } from "react-icons/fa6";
 
 function Header() {
   return (
@@ -40,14 +41,18 @@ function Header() {
 
           {/* buttons div */}
 
-          <div className="flex gap-8">
+          <div className="flex gap-8 items-center">
             <button className="text-xl font-bold">Login</button>
             <button className="py-2 
             px-6 bg-[#2A7EFF] text-xl rounded-md text-white
             ">Sign up</button>
+
+           <Link to="/cart"><FaCartArrowDown className="text-3xl text-[#2A73FF] cursor-pointer" /></Link> 
           </div>
 
-
+         
+      
+          
         </div>
 
       </div>

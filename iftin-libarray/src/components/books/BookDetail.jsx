@@ -51,6 +51,13 @@ function BookDetail() {
     }
 
 
+    const handleClick = ()=>{
+        let books = JSON.parse(localStorage.getItem("books")) || []
+        let updatedBooks = [...books, book]
+        localStorage.setItem("books", JSON.stringify(updatedBooks) )
+    }
+
+
   return (
     <div className="py-24">
         <ToastContainer />
@@ -60,9 +67,11 @@ function BookDetail() {
                   
                {/* image */}
                <div className="md:w-1/4 w-full">
-                  <img  className="h-72 mb-2 w-full" src={book.image} alt="" srcset="" />
+                  <img  className="h-72 mb-2 w-full" src={book.image} alt=""  />
 
-                  <button className="w-full py-2 border-none rounded-md bg-blue-700
+                  <button
+                  onClick={handleClick}
+                   className="w-full py-2 border-none rounded-md bg-blue-700
                   text-white mb-2
                   ">Add to cart</button>
 
