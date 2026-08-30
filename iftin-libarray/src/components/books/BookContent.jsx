@@ -1,6 +1,10 @@
+import { useContext } from "react"
+import { UserContext } from "../../UserContext"
 
 
 function BookContent({book}) {
+  const {user} = useContext(UserContext)
+ 
   return (
     <div className="w-full">
         {/* buttons */}
@@ -18,6 +22,7 @@ function BookContent({book}) {
             <p className="mt-2 mb-8">{book.description}</p>
             <span className=" font-bold text-xl">Author</span>
              <p className="font-semibold text-3xl">   {book.author}</p>
+             <p>posted by {user}</p>
         </div>
     </div>
   )

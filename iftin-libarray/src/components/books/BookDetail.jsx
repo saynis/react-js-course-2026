@@ -10,11 +10,11 @@ function BookDetail() {
     const [loading, setLoading] = useState(false)
     const [book , setBook] = useState({})
 
+   
     const {id} = useParams()
     const navigate = useNavigate()
 
 
-  
 
 
   
@@ -26,6 +26,7 @@ function BookDetail() {
             const response = await axios(`https://jju.saynis.store/api/books/${id}`)
 
             setBook(response.data.book)
+            
         } catch (error) {
             console.log(error)
         }
@@ -83,7 +84,7 @@ function BookDetail() {
                </div>
 
 
-               <BookContent book={book}/>
+               <BookContent  book={book}/>
                   
             </div>
 

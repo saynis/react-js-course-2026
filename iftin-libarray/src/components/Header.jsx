@@ -1,7 +1,17 @@
 import { Link } from "react-router-dom"
 import { FaCartArrowDown } from "react-icons/fa6";
+import { useContext } from "react";
+import { UserContext } from "../UserContext";
+
+
 
 function Header() {
+
+  const {user} = useContext(UserContext)
+
+
+
+
   return (
     <header className="bg-[#E3DCC4]  fixed w-full py-4">
 
@@ -48,6 +58,7 @@ function Header() {
             ">Sign up</button>
 
            <Link to="/cart"><FaCartArrowDown className="text-3xl text-[#2A73FF] cursor-pointer" /></Link> 
+           <span>{user}</span>
           </div>
 
          
