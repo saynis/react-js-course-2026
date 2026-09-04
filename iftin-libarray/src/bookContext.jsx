@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import { createContext, useEffect, useReducer } from "react";
 import bookReducer, {intialData} from "./bookReducer";
 import { toast } from "react-toastify";
 
@@ -8,10 +8,16 @@ const BookProvider = ({children})=>{
 
  const [state, dispatch]  = useReducer(bookReducer, intialData)
 
+
+ useEffect(()=>{
+    localStorage.setItem("books" , JSON.stringify({books: state.books}))
+
+ })
+
 // add to cart
  const addToCart = (book)=>{
     
-    const bookIndex = state.books.findeIndex(b => b.id === book.id)
+    const bookIndex = state.books.findIndex(b => b.id === book.id)
 
     let updateBooks = [...state.books]
 

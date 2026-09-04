@@ -1,8 +1,9 @@
  import { ToastContainer, toast } from 'react-toastify';
 import axios from "axios"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import BookContent from "./BookContent"
+import { bookContext } from '../../bookContext';
 
 
 function BookDetail() {
@@ -13,6 +14,11 @@ function BookDetail() {
    
     const {id} = useParams()
     const navigate = useNavigate()
+
+
+    const {addToCart} = useContext(bookContext)
+
+
 
 
 
@@ -51,12 +57,9 @@ function BookDetail() {
 
     }
 
+  
 
-    const handleClick = ()=>{
-        let books = JSON.parse(localStorage.getItem("books")) || []
-        let updatedBooks = [...books, book]
-        localStorage.setItem("books", JSON.stringify(updatedBooks) )
-    }
+
 
 
   return (
@@ -71,7 +74,7 @@ function BookDetail() {
                   <img  className="h-72 mb-2 w-full" src={book.image} alt=""  />
 
                   <button
-                  onClick={handleClick}
+                  onClick={()=> addToCart(book)}
                    className="w-full py-2 border-none rounded-md bg-blue-700
                   text-white mb-2
                   ">Add to cart</button>

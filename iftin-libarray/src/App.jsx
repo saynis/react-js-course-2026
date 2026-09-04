@@ -9,6 +9,7 @@ import BookDetail from "./components/books/BookDetail"
 import Addbook from "./components/books/Addbook"
 import Cart from "./components/books/Cart"
 import { AuthProvider } from "./UserContext"
+import BookProvider from "./bookContext"
 
 
 
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <>
+     <BookProvider> 
        <AuthProvider> 
       <Header  />     
       <Routes>
@@ -36,6 +38,7 @@ function App() {
       <Footer />
 
       </AuthProvider>
+      </BookProvider>
     
       
 

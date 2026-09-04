@@ -1,8 +1,10 @@
-export const intialData = {
+export const intialData = JSON.parse(localStorage.getItem("books")) || {
     books:[],
-    // total: 0
+  
   
 }
+
+
 
 
 // function reducer
