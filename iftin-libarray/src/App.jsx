@@ -10,6 +10,7 @@ import Addbook from "./components/books/Addbook"
 import Cart from "./components/books/Cart"
 import { AuthProvider } from "./UserContext"
 import BookProvider from "./bookContext"
+import Register from "./components/user/Register"
 
 
 
@@ -33,6 +34,8 @@ function App() {
 
         <Route path="/books/new" element={<Addbook />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/register" element={<Register />} />
+         <Route path="/register" element={<Register />} />
       </Routes>
   
       <Footer />

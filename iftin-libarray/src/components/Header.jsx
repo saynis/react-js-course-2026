@@ -53,9 +53,12 @@ function Header() {
 
           <div className="flex gap-8 items-center">
             <button className="text-xl font-bold">Login</button>
+
+            <Link to="/register"> 
             <button className="py-2 
-            px-6 bg-[#2A7EFF] text-xl rounded-md text-white
+            px-6 bg-[#2A7EFF] text-xl rounded-md text-white cursor-pointer
             ">Sign up</button>
+            </Link>
 
            <Link to="/cart"><FaCartArrowDown className="text-3xl text-[#2A73FF] cursor-pointer" /></Link> 
            <span>{user}</span>
